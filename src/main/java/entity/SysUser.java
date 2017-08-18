@@ -3,17 +3,47 @@ package entity;
 import java.util.Date;
 
 /**
- * @Title SysUser
- * @Description 系统用户表
- * @Author HL
- * @Date 2017年6月12日 上午11:26:48
+ * 网站系统 用户
+ *
+ * @author HL 2017-06-26 15:37:24
  */
 public class SysUser {
 
 	private Integer id;
+
+	/**
+	 * 登录账号
+	 */
 	private String loginName;
-	private String realName;
+
+	/**
+	 * 登录密码
+	 */
 	private String password;
+
+	/**
+	 * 用户真实称谓
+	 */
+	private String realName;
+
+	/**
+	 * 用户简称
+	 */
+	private String callName;
+
+	/**
+	 * 用户类型
+	 */
+	private String type;
+
+	/**
+	 * 添加人 id-添加时名称
+	 */
+	private String adderName;
+
+	/**
+	 * 添加时间 数据库自动插入时间戳
+	 */
 	private Date addTime;
 
 	public Integer getId() {
@@ -32,6 +62,14 @@ public class SysUser {
 		this.loginName = loginName;
 	}
 
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	public String getRealName() {
 		return realName;
 	}
@@ -40,12 +78,28 @@ public class SysUser {
 		this.realName = realName;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getCallName() {
+		return callName;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setCallName(String callName) {
+		this.callName = callName;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getAdderName() {
+		return adderName;
+	}
+
+	public void setAdderName(String adderName) {
+		this.adderName = adderName;
 	}
 
 	public Date getAddTime() {
@@ -55,5 +109,4 @@ public class SysUser {
 	public void setAddTime(Date addTime) {
 		this.addTime = addTime;
 	}
-
 }
